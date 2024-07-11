@@ -1,0 +1,24 @@
+package com.example.demo.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.models.registration;
+import com.example.demo.services.registration_services;
+@RestController
+@RequestMapping("/api/v1")
+
+public class registration_controller {
+	@Autowired
+	
+	registration_services ser;
+	@PostMapping("/add")
+ registration adding( @RequestBody registration reg) {
+		return ser.addingstudentdata(reg);
+	}
+	
+
+}

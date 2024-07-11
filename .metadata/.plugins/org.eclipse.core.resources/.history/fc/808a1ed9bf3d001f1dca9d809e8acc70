@@ -1,0 +1,34 @@
+package com.example.demo.models;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+//generate getters setters above the table
+@Entity
+//create table by giving entity
+
+
+public class registration {
+	@Id
+//	creating starting point
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	private String name;
+	
+	private String email;
+	
+	private long phone;
+//	creating columns names for table
+
+}

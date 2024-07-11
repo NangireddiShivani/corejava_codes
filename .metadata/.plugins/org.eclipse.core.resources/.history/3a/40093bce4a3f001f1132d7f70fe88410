@@ -1,0 +1,21 @@
+package com.example.demo.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.registration;
+import com.example.demo.repository.registration_repository;
+
+@Service
+
+public class registration_services {
+	
+	@Autowired
+	registration_repository repo;
+	public registration addingstudentdata(registration reg) {
+		return repo.save(reg);
+	}
+//	creating method
+//	save-to send single data
+
+}
